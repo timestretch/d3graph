@@ -1,0 +1,24 @@
+<script>
+
+var dataset = [ 5, 10, 15, 20, 25 ];
+
+d3.select("report").selectAll("div")
+	.data(dataset)
+	.enter()
+	.append("div")
+	.attr({
+		"style": function(d) {
+			return "width:" + d * 5 + "px";
+		},
+		"class": "bar"
+	})
+	.text(function(d) {
+		return d;
+	});
+
+</script>
+
+<h3>Fives</h3>
+
+<div id="report">
+</div>
